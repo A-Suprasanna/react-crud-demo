@@ -1,0 +1,12 @@
+1. CREATE
+
+-> Form Inputs -> City Name, State - FINISHED
+-> Add Create Button - FINISHED 
+-> Click = > List - Add at Last - PENDING 
+   => If Same City Name, Alert. 
+   => else Insert City & State 
+
+
+2. READ
+3. UPDATE
+4. DELETE
