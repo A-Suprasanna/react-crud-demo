@@ -10,3 +10,20 @@
 2. READ
 3. UPDATE
 4. DELETE
+
+
+Storing the state globally:
+
+* Parent versus Child -> props 
+* no Parent- Child relationship 
+   - localStorage
+   - Top most Parent <></> - fetch the state manually - smaller apps - ok , large apps - props drilling
+
+Publish Subscription Model -> Pub Sub Model 
+
+- One central Place / Store - ALL Data (all state / variables)
+- Store -> any component can fetch state from store 
+- Publish at Store 
+- All components can Subscribe from Store. 
+
+useContext hook

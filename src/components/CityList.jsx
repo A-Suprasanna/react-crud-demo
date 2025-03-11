@@ -1,24 +1,23 @@
-import React, { useState } from "react";
+// !! Subscribe mode
+import React, { useContext } from "react";
+import { CityContext } from "../context/CityProvider";
 import "../App.css";
-import cities from "../helpers/cities.json";
 // step -1
 import { useNavigate } from "react-router-dom";
 
 function CityList() {
   // step -2
   const navigate = useNavigate();
-  // declaring the initial state
-  const [cityList, setCityList] = useState(cities);
+
+  const { cityList } = useContext(CityContext);
 
   return (
     <div className="city-list">
       {cityList.map((city) => {
         return <li key={city.id}>{city.name}</li>;
       })}
-      {/* !! important */}
       <button
         onClick={() => {
-          // console.log("button is clicked");
           navigate("/create");
         }}
       >
