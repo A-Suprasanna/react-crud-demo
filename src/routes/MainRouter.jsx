@@ -1,13 +1,13 @@
 /*
 / - home page -> <CityList />
 /create - Create a new City -> <CreateCity />
-
 /:id - (useParams) -> View City by Id -> TBD 
 */
 
 import CityList from "../components/CityList";
 import CreateCity from "../components/CreateCity";
 import Landing from "../pages/Landing";
+import ViewCity from "../components/ViewCity";
 
 const MainRoutes = {
   path: "",
@@ -20,6 +20,10 @@ const MainRoutes = {
     {
       path: "/cities",
       element: <CityList />,
+    },
+    {
+      path: "/cities/view/:id",
+      element: <ViewCity />,
     },
   ],
 };

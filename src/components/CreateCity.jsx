@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { CityContext } from "../context/CityProvider";
+import { useNavigate } from "react-router-dom";
 
 function CreateCity() {
   const { setCityList, cityList } = useContext(CityContext);
@@ -8,6 +9,8 @@ function CreateCity() {
     city: "",
     state: "",
   });
+
+  const navigate = useNavigate();
 
   const handleSubmit = (ev) => {
     ev.preventDefault();
@@ -26,6 +29,7 @@ function CreateCity() {
         },
       ];
     });
+    navigate("/cities");
   };
 
   const handleChange = (ev) => {
@@ -65,11 +69,6 @@ function CreateCity() {
         <button type="submit">Create City</button>
       </form>
       <br />
-      <div className="city-list">
-        {cityList.map((city) => {
-          return <li key={city.id}>{city.name}</li>;
-        })}
-      </div>
     </div>
   );
 }

@@ -14,7 +14,18 @@ function CityList() {
   return (
     <div className="city-list">
       {cityList.map((city) => {
-        return <li key={city.id}>{city.name}</li>;
+        return (
+          <div
+            key={city.id}
+            onClick={() => {
+              navigate(`/cities/view/${city.id}`);
+            }}
+          >
+            <h4>
+              <b>{city.name}</b>
+            </h4>
+          </div>
+        );
       })}
       <button
         onClick={() => {

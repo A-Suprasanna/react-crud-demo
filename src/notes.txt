@@ -27,3 +27,25 @@ Publish Subscription Model -> Pub Sub Model
 - All components can Subscribe from Store. 
 
 useContext hook
+
+
+
+
+1. useNavigate -
+
+to programmatically change from one route to another 
+navigate("/route_name");
+
+2. useParams - 
+
+URL -> dynamic -> data fetch 
+rendering on the UI 
+
+
+
+O(n) - linear search 
+O(n log n) - binary search 
+
+/ for loop 
+/ filter -> response []
+/ find -> element 
